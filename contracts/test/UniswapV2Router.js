@@ -18,8 +18,8 @@ describe("UniswapV2Adapter", function () {
     user = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
     // Uniswap V2 router and WETH
-    router = "0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008";
-    WETH = "0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9";
+    router = process.env.ROUTER_ADDRESS;
+    WETH = process.env.WETH_ADDRESS;
 
     // Deploy Mock Tokens
     const MockToken = await ethers.getContractFactory("MockERC20");

@@ -29,6 +29,8 @@ Create a .env file in the root directory and define the following:
 ```env
 SEPOLIA_RPC_URL="RPC_URL"
 PRIVATE_KEY="update your private_key"
+ROUTER_ADDRESS="Router Address"
+WETH_ADDRESS="Weth address"
 ```
 ## Install Dependencies**
 ```bash
@@ -38,6 +40,10 @@ npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox dotenv @nomiclab
 ## Compile Contracts
 ```bash
 npx hardhat compile
+```
+## Deploy Contracts
+```bash
+npx hardhat ignition deploy ./ignition/modules/UniswapModule.js --network sepolia
 ```
 ## Run Tests
 ```bash
@@ -67,7 +73,9 @@ A React-based token swapping interface integrated with Uniswap using `ethers.js`
 2. **Install Dependencies**
 
    ```bash
-   yarn install || npm install
+   yarn install
+   # or
+   npm install
    ```
 
 3. **Set Up Environment Variables**
@@ -92,4 +100,6 @@ A React-based token swapping interface integrated with Uniswap using `ethers.js`
    TokenA: 0x2C1b47D6e4EAA6CdB4B7C660bb5aFcbB34be2f75
    TokenB: 0x8276ffD5c6b30DE344DAcd4f840fd65A15f2B847
    Weth: 0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9
+   Router Address: 0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008
+   Weth address: 0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9
    ```
